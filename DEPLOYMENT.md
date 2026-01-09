@@ -4,23 +4,28 @@ This Flask application can be deployed to various platforms. Here are the recomm
 
 ## Quick Deploy Options
 
-### 1. **Railway** (Recommended - Easiest)
+### 1. **Render** (Recommended - Easiest)
+- Go to [render.com](https://render.com)
+- Sign up/login with GitHub
+- Click "New" → "Web Service"
+- Connect your GitHub repository: `kaibalya-biswal/universal-file-converter`
+- Settings:
+  - **Name**: universal-file-converter (or any name you prefer)
+  - **Environment**: Python 3
+  - **Build Command**: `pip install -r requirements.txt`
+  - **Start Command**: `gunicorn app:app`
+  - **Plan**: Free (or choose a paid plan)
+- Click "Create Web Service"
+- Render will automatically build and deploy your app
+- Your app will be live at `https://your-app-name.onrender.com`
+
+### 2. **Railway**
 - Go to [railway.app](https://railway.app)
 - Sign up/login with GitHub
 - Click "New Project" → "Deploy from GitHub repo"
 - Select your repository
 - Railway will automatically detect Flask and deploy
 - Your app will be live in minutes!
-
-### 2. **Render**
-- Go to [render.com](https://render.com)
-- Sign up/login with GitHub
-- Click "New" → "Web Service"
-- Connect your GitHub repository
-- Settings:
-  - Build Command: `pip install -r requirements.txt`
-  - Start Command: `gunicorn app:app`
-- Click "Create Web Service"
 
 ### 3. **Heroku**
 - Install Heroku CLI
