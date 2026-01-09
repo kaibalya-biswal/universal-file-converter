@@ -34,12 +34,16 @@ outputs/
 *.docx
 *.txt
 *.html
-*.json
 *.csv
 *.xml
 *.rtf
 *.epub
 *.odt
+
+# JSON files (but keep config files)
+*.json
+!package.json
+!railway.json
 
 # IDE
 .vscode/
